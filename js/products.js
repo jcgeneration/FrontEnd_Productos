@@ -1,6 +1,8 @@
 let productos;
+// Aquí se debe cambiar el URL del servicio en el BackEnd
+const URL_MAIN ='http://localhost:8080/api/productos/';
 function addItems(div_Productos) {
-    fetch('http://localhost:8080/api/productos/', {
+    fetch(URL_MAIN, {
         method: 'get'
     }).then(function(response) {
         response.json().then(function (json) {
@@ -57,7 +59,7 @@ function view(index) {
 //     url_Imagen: "cuadernodobleraya.jpg"
 // };
 
-// fetch('http://localhost:8080/api/productos/', {
+// fetch(URL_MAIN, {
 //   method: 'POST', // or 'PUT'
 //   headers: {
 //     'Content-Type': 'application/json',
